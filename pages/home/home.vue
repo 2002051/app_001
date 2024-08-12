@@ -1,7 +1,7 @@
 <template>
-<login_form @doClose="Do" v-if="isShowLoginForm">
-	
-</login_form>
+<login_form @doClose="Do" v-if="isShowLoginForm"></login_form>
+
+
 
 </template>
 
