@@ -1,7 +1,6 @@
 <template>
+	
 	<view class="body">
-		
-		<login_form @doClose="Do" v-if="isShowLoginForm"></login_form>
 		<view class="news">
 			<news></news>
 		</view>
@@ -18,11 +17,12 @@
 		</view>
 	</view>
 
-<view class="tools">
+<view class="tools" @click="doAddAlbum">
 	<uni-icons type="plus" size="30"></uni-icons>
 	<!-- 添加 -->
 </view>
-
+<login_form @doClose="Do" v-if="isShowLoginForm"></login_form>
+<add_album_form @doClose="DoCloseAddAlbumForm" v-if="isadd"></add_album_form>
 
 </template>
 
@@ -70,11 +70,20 @@
 		id: 4,
 		title: "测试相册4"
 	}])
-
+	const isadd = ref(false)
 
 	function Do() {
 		isShowLoginForm.value = !isShowLoginForm.value
 	}
+	function DoCloseAddAlbumForm(){
+		isadd.value = false
+	}
+	function doAddAlbum(){
+		// console.log(123)
+		isadd.value = true
+	}
+	
+	
 </script>
 
 <style lang="scss">
