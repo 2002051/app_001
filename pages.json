@@ -1,16 +1,51 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages、
+	{
+		"path": "pages/home/home",
+		"style": {
+			"navigationBarTitleText": "主页"
+		}
+	},
+	
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
 		},
+		
 		{
-			"path" : "pages/home/home",
+			"path": "pages/self/self",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path" : "pages/album/album",
 			"style" : 
 			{
 				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/pgdetail/pgdetail",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/liveshow/liveshow",
+			"style" : 
+			{
+				"navigationBarTitleText" : "直播页面"
+			}
+		},
+		{
+			"path" : "pages/memo/memo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "备忘录"
 			}
 		}
 	],
@@ -20,5 +55,36 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"backgroundColor": "#ffffff",
+		"color": "#333",
+		"selectedColor": "#1c73e8",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home_act.png"
+			},
+			{
+				"pagePath": "pages/liveshow/liveshow",
+				"text": "直播",
+				"iconPath": "static/tabbar/liveshow.png",
+				"selectedIconPath": "static/tabbar/liveshow_act.png"
+			},
+			{
+				"pagePath": "pages/memo/memo",
+				"text": "备忘录",
+				"iconPath": "static/tabbar/memo.png",
+				"selectedIconPath": "static/tabbar/memo_act.png"
+			},
+			{
+				"pagePath": "pages/self/self",
+				"text": "个人中心",
+				"iconPath": "static/tabbar/self.png",
+				"selectedIconPath": "static/tabbar/self_act.png"
+			}
+		]
+	}
 }

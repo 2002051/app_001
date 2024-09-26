@@ -38,9 +38,14 @@
 
 	<!-- 黑色遮罩层 -->
 	<view class="curtain" @click="handleClick">
-		宝宝最美
+
 	</view>
 
+<view class="tools">
+	<uni-icons type="add" size="30"></uni-icons>
+	<!-- 添加 -->
+	
+</view>
 </template>
 
 <script setup>
@@ -187,6 +192,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.5); // 半透明遮罩层
+		// background-color:#; // 半透明遮罩层
 		display: flex;
 		justify-content: center;
 		align-items: center;
