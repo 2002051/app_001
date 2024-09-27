@@ -1,0 +1,53 @@
+.notice {
+    width: 690rpx;
+    height: 80rpx;
+    background-color: #ebebeb;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 80rpx;
+    line-height: 80rpx;
+
+    .left {
+        width: 140rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        :deep() {
+            .uni-icons {
+                color: #28B389;
+            }
+        }
+
+
+        .text {
+            color: #28B389;
+            font-weight: 600;
+            font-size: 28rpx;
+        }
+    }
+
+    .right {
+        width: 70rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .center {
+        flex: 1;
+
+        swiper {
+            height: 100%; // 高度继承父级
+
+            swiper-item {
+                height: 100%;
+                font-size: 30rpx;
+                //  超出一定长度的内容,用...表示
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+    }
+}
